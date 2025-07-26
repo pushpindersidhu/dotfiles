@@ -11,6 +11,8 @@ brew "node"
 brew "openjdk"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
