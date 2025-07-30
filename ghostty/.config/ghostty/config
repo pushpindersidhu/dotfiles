@@ -1,0 +1,13 @@
+font-size = 14
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+theme = dark:catppuccin-mocha, light:catppuccin-latte
+
+background-opacity = 0.75
+background-blur = 20
+
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+
