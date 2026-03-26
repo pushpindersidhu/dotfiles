@@ -4,7 +4,7 @@ font-feature = -calt, -liga, -dlig
 cursor-style = block
 shell-integration-features = no-cursor
 
-theme = dark:catppuccin-mocha, light:catppuccin-latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 background-opacity = 0.75
 background-blur = 20
