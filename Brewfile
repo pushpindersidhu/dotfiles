@@ -5,7 +5,7 @@ brew "cocoapods"
 brew "go"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Development kit for the Java programming language
 brew "openjdk"
@@ -24,7 +24,7 @@ brew "wget"
 # Network analyzer and capture tool - without graphical user interface
 brew "wireshark"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # Memory training application
 cask "anki"
 # App to build and share containerised applications and microservices
