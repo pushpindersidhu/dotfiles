@@ -21,18 +21,26 @@ brew "tree"
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# Network analyzer and capture tool - without graphical user interface
+brew "wireshark"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
+# Memory training application
+cask "anki"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Web browser
 cask "firefox"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "vscodevim.vim"
