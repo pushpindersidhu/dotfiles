@@ -8,6 +8,17 @@ after-startup-command = []
 # Start AeroSpace at login
 start-at-login = true 
 
+# Open apps on workspace change
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    '''
+        if [ "$AEROSPACE_FOCUSED_WORKSPACE" = "T" ]; then open -a Ghostty;
+        elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "Y" ]; then open -a "YouTube";
+        elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "M" ]; then open -a "YouTube Music"; fi
+    '''
+]
+
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -204,3 +215,18 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+
+# Move windows to workspace
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome.app.cinhimbnkkaeohfgghhklpknlkffjgod'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome.app.agimnkijcaahngcdmfeangaknmldooml'
+run = 'move-node-to-workspace Y'
+
