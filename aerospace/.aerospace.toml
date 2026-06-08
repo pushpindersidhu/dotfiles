@@ -15,7 +15,8 @@ exec-on-workspace-change = [
     '''
         if [ "$AEROSPACE_FOCUSED_WORKSPACE" = "T" ]; then open -a Ghostty;
         elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "Y" ]; then open -a "YouTube";
-        elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "M" ]; then open -a "YouTube Music"; fi
+        elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "M" ]; then open -a "YouTube Music";
+        elif [ "$AEROSPACE_FOCUSED_WORKSPACE" = "W" ]; then open -a "WhatsApp"; fi
     '''
 ]
 
@@ -230,3 +231,6 @@ run = 'move-node-to-workspace M'
 if.app-id = 'com.google.Chrome.app.agimnkijcaahngcdmfeangaknmldooml'
 run = 'move-node-to-workspace Y'
 
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace W'
