@@ -3,6 +3,8 @@ tap "nikitabobko/tap"
 brew "cocoapods"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Mac App Store command-line interface
+brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
@@ -44,3 +46,9 @@ cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "vscodevim.vim"
+# Mac App Store applications
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Word", id: 462054704
+mas "WhatsApp", id: 310633997
+mas "Windows App", id: 1295203466
+mas "WireGuard", id: 1451685025
