@@ -94,6 +94,18 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ---------------------------------------------------------
+# Install Rust toolchain
+# ---------------------------------------------------------
+if ! command -v rustup &>/dev/null; then
+    echo "🦀 Installing Rust toolchain..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    export PATH="$HOME/.cargo/bin:$PATH"
+    echo "✅ Rust toolchain installed successfully!"
+else
+    echo "✅ Rust is already installed."
+fi
+
+# ---------------------------------------------------------
 # Install Packages
 # ---------------------------------------------------------
 if [ -f "Brewfile" ]; then
