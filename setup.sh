@@ -4,6 +4,17 @@ set -e
 
 echo "🚀 Starting setup..."
 
+# -----------------------------------------
+# Requesting sudo permissions
+# -----------------------------------------
+
+if ! sudo -v; then
+    echo "❌ Failed to obtain sudo privileges. Exiting setup..."
+    exit 1
+fi
+
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # ---------------------------------------------------------
 # Xcode Command Line Tools
 # ---------------------------------------------------------
