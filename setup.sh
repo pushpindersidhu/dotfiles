@@ -7,13 +7,19 @@ echo "🚀 Starting setup..."
 # -----------------------------------------
 # Requesting sudo permissions
 # -----------------------------------------
-
 if ! sudo -v; then
     echo "❌ Failed to obtain sudo privileges. Exiting setup..."
     exit 1
 fi
 
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do 
+    sudo -v
+    sleep 60
+done 2>/dev/null &
+
+SUDO_PID=$!
+
+trap 'kill "$SUDO_PID" 2>/dev/null' EXIT
 
 # ---------------------------------------------------------
 # Xcode Command Line Tools
