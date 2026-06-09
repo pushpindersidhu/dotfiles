@@ -86,8 +86,6 @@ cask "ghostty"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Control your tools with a few keystrokes
-cask "raycast"
 # System monitor for the menu bar
 cask "stats"
 # Virtual machines UI using QEMU
