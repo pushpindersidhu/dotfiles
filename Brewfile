@@ -1,12 +1,49 @@
+tap "hashicorp/tap"
 tap "nikitabobko/tap"
+# Command-line interface for SQLite
+brew "sqlite"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# .NET Core
+brew "dotnet"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Powerful, lightweight programming language
+brew "lua"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
+brew "nmap"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Development kit for the Java programming language
@@ -15,16 +52,24 @@ brew "openjdk"
 brew "ripgrep"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# High-performance system programming language
+brew "swift"
 # Terminal multiplexer
 brew "tmux"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
 brew "wget"
 # Network analyzer and capture tool - without graphical user interface
 brew "wireshark"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Terraform
+brew "hashicorp/tap/terraform"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
 # Memory training application
@@ -41,14 +86,20 @@ cask "ghostty"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Control your tools with a few keystrokes
+cask "raycast"
+# System monitor for the menu bar
+cask "stats"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
-vscode "vscodevim.vim"
-# Mac App Store applications
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Word", id: 462054704
 mas "WhatsApp", id: 310633997
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
+vscode "esbenp.prettier-vscode"
+vscode "teabyii.ayu"
+vscode "vscode-icons-team.vscode-icons"
+vscode "vscodevim.vim"
