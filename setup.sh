@@ -187,6 +187,98 @@ for PKG in "${PACKAGES[@]}"; do
 done
 echo "✅ All packages stowed successfully!"
 
+# ---------------------------------------------------------
+# macOS Dock, System & App Configurations
+# ---------------------------------------------------------
+echo "⚙️  Configuring macOS System & Dock Preferences..."
+
+# --- KEYBOARD ---
+echo "   [Keyboard]"
+defaults write NSGlobalDomain KeyRepeat -int 2
+echo "      > Key repeat rate set to 2"
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+echo "      > Initial key repeat delay set to 15"
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+echo "      > Press-and-hold disabled — key repeats instead of showing accent picker"
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+echo "      > Smart quotes disabled"
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+echo "      > Smart dashes disabled"
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+echo "      > Auto-capitalisation disabled"
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+echo "      > Auto-correct disabled"
+ 
+# --- MOUSE ---
+echo "   [Mouse]"
+defaults write .GlobalPreferences com.apple.mouse.linear -bool true
+echo "      > Mouse acceleration disabled — linear tracking"
+ 
+# --- DOCK ---
+echo "   [Dock]"
+defaults write com.apple.dock persistent-apps -array
+echo "      > Persistent apps cleared from Dock"
+defaults write com.apple.dock tilesize -int 64 
+echo "      > Icon size set to 64px"
+defaults write com.apple.dock autohide -bool true
+echo "      > Auto-hide enabled"
+defaults write com.apple.dock autohide-delay -float 0
+echo "      > Auto-hide delay set to 0 (instant)"
+defaults write com.apple.dock autohide-time-modifier -float 0.2
+echo "      > Auto-hide animation duration set to 0.2s"
+ 
+# --- MISSION CONTROL ---
+echo "   [Mission Control]"
+defaults write com.apple.dock mru-spaces -bool false
+echo "      > Spaces will not auto-rearrange based on recent use"
+defaults write com.apple.dock expose-group-apps -bool true
+echo "      > Windows grouped by app in Mission Control"
+ 
+# --- FINDER ---
+echo "   [Finder]"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+echo "      > All file extensions shown"
+defaults write com.apple.finder AppleShowAllFiles -bool true
+echo "      > Hidden files and dotfiles visible"
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+echo "      > Folders sorted to top in all views"
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+echo "      > Default view set to icon view"
+defaults write com.apple.finder FXArrangeBy -string "name"
+echo "      > Files auto-arranged by name"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+echo "      > Extension change warning disabled"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+echo "      > Search defaults to current folder"
+defaults write com.apple.finder ShowPathbar -bool true
+echo "      > Path bar shown at bottom of window"
+ 
+# --- SCREENSHOTS ---
+echo "   [Screenshots]"
+defaults write com.apple.screencapture location -string "$HOME/Desktop/"
+echo "      > Screenshot save location set to ~/Desktop"
+ 
+# --- NETWORK & STORAGE ---
+echo "   [Network & Storage]"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+echo "      > .DS_Store files will not be created on network volumes"
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+echo "      > .DS_Store files will not be created on USB volumes"
+ 
+# --- SECURITY ---
+echo "   [Security]"
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+echo "      > App quarantine warning disabled"
+
+echo "🔄 Refreshing system processes..."
+for app in "Dock" "Finder" "SystemUIServer"; do
+    killall "$app" &>/dev/null || true
+done
+echo "✅ System preferences configured successfully!"
+
+# ---------------------------------------------------------
+# Cleanup & Exit
+# ---------------------------------------------------------
 echo "🔄 Resetting dotfiles repo to clean state..."
 git reset --hard HEAD
 
