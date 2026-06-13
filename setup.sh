@@ -224,8 +224,6 @@ defaults write com.apple.dock autohide -bool true
 echo "      > Auto-hide enabled"
 defaults write com.apple.dock autohide-delay -float 0
 echo "      > Auto-hide delay set to 0 (instant)"
-defaults write com.apple.dock autohide-time-modifier -float 0.2
-echo "      > Auto-hide animation duration set to 0.2s"
  
 # --- MISSION CONTROL ---
 echo "   [Mission Control]"
