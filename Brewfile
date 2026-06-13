@@ -48,6 +48,8 @@ brew "nmap"
 brew "node"
 # Development kit for the Java programming language
 brew "openjdk"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -86,14 +88,14 @@ cask "ghostty"
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Document editor
+cask "onlyoffice"
 # System monitor for the menu bar
 cask "stats"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft Word", id: 462054704
 mas "WhatsApp", id: 310633997
 mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
