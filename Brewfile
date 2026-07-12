@@ -94,6 +94,10 @@ cask "onlyoffice"
 cask "stats"
 # Virtual machines UI using QEMU
 cask "utm"
+# Multimedia player
+cask "vlc"
+# Gecko based web browser
+cask "zen"
 # Open-source code editor
 cask "visual-studio-code"
 mas "WhatsApp", id: 310633997
